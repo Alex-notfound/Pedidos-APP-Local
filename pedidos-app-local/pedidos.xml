@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tns:root xmlns:tns="http://www.pedidos-app-local.es/app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pedidos-app-local.es/app pedidos.xsd ">
+
+    <pedido>
+        <referencia>ZA-101312</referencia>
+        <fechaPedido>2021-03-08</fechaPedido>
+        <fechaEntrega>2022-03-08</fechaEntrega>
+        <precio>150.51</precio>
+        <urgente>true</urgente>
+        <mueble>
+            <id>1</id>
+            <unidades>1</unidades>
+            <tipo>Mesilla</tipo>
+            <modelo>Laurica</modelo>
+            <color>Nórdico</color>
+            <grosor>4</grosor>
+            <medidas>80x70x50</medidas>
+            <descripcion>Esto es una descripción</descripcion>
+            <precioUnidad>23.47</precioUnidad>
+        </mueble>
+        <mueble>
+            <id>2</id>
+            <unidades>2</unidades>
+            <tipo>Sinfonier</tipo>
+            <modelo>Martica</modelo>
+            <color>Nogal</color>
+            <grosor>3</grosor>
+            <medidas>140x30x60</medidas>
+            <precioUnidad>70.00</precioUnidad>
+        </mueble>
+    </pedido>
+
+    <pedido>
+        <referencia>BA-151219</referencia>
+        <fechaPedido>2021-03-09</fechaPedido>
+        <fechaEntrega>2022-03-10</fechaEntrega>
+        <precio>200</precio>
+        <urgente>false</urgente>
+        <mueble>
+            <id>1</id>
+            <unidades>1</unidades>
+            <tipo>Mesilla</tipo>
+            <modelo>Laurica</modelo>
+            <color>Nórdico</color>
+            <grosor>4</grosor>
+            <medidas>80x70x50</medidas>
+            <descripcion>Esto es una descripción</descripcion>
+            <precioUnidad>23.47</precioUnidad>
+        </mueble>
+        <mueble>
+            <id>2</id>
+            <unidades>2</unidades>
+            <tipo>Sinfonier</tipo>
+            <modelo>Martica</modelo>
+            <color>Nogal</color>
+            <grosor>3</grosor>
+            <medidas>140x30x60</medidas>
+            <precioUnidad>70.00</precioUnidad>
+        </mueble>
+    </pedido>
+
+</tns:root>

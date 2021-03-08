@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.pedidos-app-local.es/app" xmlns:tns="http://www.pedidos-app-local.es/app">
+
+    <element name="root">
+        <complexType>
+            <sequence>
+                <element name="pedido" type="tns:pedido" minOccurs="1" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="pedido">
+        <sequence>
+            <element name="referencia" type="string" minOccurs="1" maxOccurs="1" />
+            <element name="fechaPedido" type="date" minOccurs="1" maxOccurs="1" />
+            <element name="fechaEntrega" type="date" minOccurs="0" maxOccurs="1" />
+            <element name="precio" type="decimal" default="0.0" minOccurs="1" maxOccurs="1" />
+            <element name="urgente" type="boolean" minOccurs="1" maxOccurs="1" />
+            <element name="mueble" type="tns:mueble" minOccurs="1" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="mueble">
+        <sequence>
+            <element name="id" type="integer" minOccurs="1" maxOccurs="1" />
+            <element name="unidades" type="integer" minOccurs="1" maxOccurs="1" />
+            <element name="tipo" type="string" minOccurs="1" maxOccurs="1" />
+            <element name="modelo" type="string" minOccurs="1" maxOccurs="1" />
+            <element name="color" type="string" minOccurs="1" maxOccurs="1" />
+            <element name="grosor" type="integer" minOccurs="1" maxOccurs="1" />
+            <element name="medidas" type="string" minOccurs="1" maxOccurs="1" />
+            <element name="descripcion" type="string" minOccurs="0" maxOccurs="1" />
+            <element name="precioUnidad" type="decimal" default="0.0" minOccurs="1" maxOccurs="1" />
+        </sequence>
+    </complexType>
+</schema>
