@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="script.js"></script>
+  <title>HTML5 File API</title>
+</head>
+<body >
+    <textarea id="input-xml" rows="10" cols="80"><root>
+        <list>
+           <item>a</item>
+           <item>b</item>
+        </list>
+      </root>
+      </textarea>
+      
+      <textarea id="xslt" rows="10" cols="80">
+      <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+        <xsl:output method="html"/>
+        
+        <xsl:template match="root">
+           <html>
+             <body>
+               <xsl:apply-templates/>
+             </body>
+           </html>
+         </xsl:template>
+         
+         <xsl:template match="list">
+           <ul>
+             <xsl:apply-templates/>
+           </ul>
+         </xsl:template>
+         
+         <xsl:template match="item">
+           <li>
+             <xsl:apply-templates/>
+           </li>
+         </xsl:template>
+      </xsl:stylesheet>
+      </textarea>
+      
+      <input type="button" value="transform"
+        onclick="document.getElementById('result').value = transform(document.getElementById('input-xml').value, document.getElementById('xslt').value);">
+        
+      <input type="button" value="load and transform"
+        onclick="handler1();">
+        
+      <!--
+      <input type="button" value="load and transform from url"
+        onclick="handler2();">
+      -->
+        
+      <textarea id="result" rows="10" cols="80"></textarea>
+</body>
+</html>
